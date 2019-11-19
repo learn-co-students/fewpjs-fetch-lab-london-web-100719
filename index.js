@@ -1,7 +1,7 @@
 function fetchBooks() {
-  return fetch('https://anapioficeandfire.com/api/books')
-    .then(resp => resp.json())
-    .then(json => renderBooks(json))
+  return fetch('https://anapioficeandfire.com/api/books') // HTTP request to remote API, API responds with data requested
+    .then(resp => resp.json()) // convert JSON into object 
+    .then(json => renderBooks(json)) // call renderBooks() on this object 
 }
 
 function renderBooks(json) {
